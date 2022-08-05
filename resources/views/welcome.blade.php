@@ -35,10 +35,7 @@
                     <div class="hero-inner">
 						<div class="hero-copy">
 	                        <h1 class="hero-title mt-0">Pouch Africa</h1>
-	                        {{-- <p class="hero-paragraph">Transact with Ease</p>
-	                        <div class="hero-cta">
-								<a class="button button-primary button-wide-mobile" href="#">Get early access</a>
-							</div> --}}
+	                        <p class="hero-paragraph">Coming Soon</p>
 						</div>
 						<div class="mockup-container">
 							<div class="mockup-bg">
