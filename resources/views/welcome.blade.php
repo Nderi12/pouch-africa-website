@@ -1,127 +1,347 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html class="no-js" lang="zxx">
+
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pouch</title>
-    <link href="https://fonts.googleapis.com/css?family=Heebo:400,700|Oxygen:700" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <script src="https://unpkg.com/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Pouch - You daily business wallet</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/favicon.svg') }}" />
+
+    <!-- ========================= CSS here ========================= -->
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/LineIcons.2.0.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/tiny-slider.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/glightbox.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" />
+
 </head>
-<body class="is-boxed has-animations">
-    <div class="body-wrap boxed-container">
-        <header class="site-header text-light">
-            <div class="container">
-                <div class="site-header-inner">
-                    <div class="brand header-brand">
-                        <h1 class="m-0">
-                            <a href="#">
-								<img class="header-logo-image" src="{{ asset('images/logo.svg') }}" alt="Logo">
+
+<body>
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /End Preloader -->
+
+    <!-- Start Header Area -->
+    <header class="header navbar-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="nav-inner">
+                        <!-- Start Navbar -->
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="index.html">
+                                <h3>POUCH</h3>
                             </a>
-                        </h1>
+                            <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ms-auto">
+                                    <li class="nav-item">
+                                        <a href="#home" class="page-scroll active"
+                                            aria-label="Toggle navigation">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#features" class="page-scroll"
+                                            aria-label="Toggle navigation">Features</a>
+                                    </li>
+                                </ul>
+                            </div> <!-- navbar collapse -->
+                            <div class="button add-list-button">
+                                <a href="https://play.google.com/store/apps/details?id=com.pouch.africa.app" class="btn">Get it now</a>
+                            </div>
+                        </nav>
+                        <!-- End Navbar -->
+                    </div>
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </header>
+    <!-- End Header Area -->
+
+    <!-- Start Hero Area -->
+    <section id="home" class="hero-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 col-md-12 col-12">
+                    <div class="hero-content">
+                        <h1 class="wow fadeInLeft" data-wow-delay=".4s">A Powerful Solution For Your Business.</h1>
+                        <p class="wow fadeInLeft" data-wow-delay=".6s">From easy business transactions, to articulate business financial management, Pouch helps you
+                            to transact and monitor your day to day business transactions.</p>
+                        <div class="button wow fadeInLeft" data-wow-delay=".8s">
+                            {{-- <a href="javascript:void(0)" class="btn"><i class="lni lni-apple"></i> App Store</a> --}}
+                            <a href="https://play.google.com/store/apps/details?id=com.pouch.africa.app" class="btn btn-alt"><i class="lni lni-play-store"></i> Google
+                                Play</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-12 col-12">
+                    <div class="hero-image wow fadeInRight" data-wow-delay=".4s">
+                        <img src="assets/images/hero/phone3.png" alt="#" style="width: 50%">
+                        <img src="assets/images/hero/phone2.png" alt="#" style="width: 40%">
                     </div>
                 </div>
             </div>
-        </header>
+        </div>
+    </section>
+    <!-- End Hero Area -->
 
-        <main>
-            <section class="hero text-center text-light">
-				<div class="hero-bg"></div>
-				<div class="hero-particles-container">
-					<canvas id="hero-particles"></canvas>
-				</div>
-                <div class="container-sm">
-                    <div class="hero-inner">
-						<div class="hero-copy">
-	                        <h1 class="hero-title mt-0">Pouch Africa</h1>
-	                        <p class="hero-paragraph">Coming Soon</p>
-						</div>
-						<div class="mockup-container">
-							<div class="mockup-bg">
-								<img src="{{ asset('images/iphone-hero-bg.svg') }}" alt="iPhone illustration">
-							</div>
-							<img class="device-mockup" src="{{ asset('images/iphone-hero.png') }}" alt="iPhone Hero">
-						</div>
+    <!-- Start Features Area -->
+    <section id="features" class="features section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <h3 class="wow zoomIn" data-wow-delay=".2s">Features</h3>
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Your Experience Gets Better And Better Over Time.
+                        </h2>
+                        <p class="wow fadeInUp" data-wow-delay=".6s">Control your business day to day transaction from one place with ease.</p>
                     </div>
                 </div>
-            </section>
-        </main>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Start Single Feature -->
+                    <div class="single-feature wow fadeInUp" data-wow-delay=".2s">
+                        <i class="lni lni-users"></i>
+                        <h3>Teams</h3>
+                        <p>Manage and control your teams' spending in one place</p>
+                    </div>
+                    <!-- End Single Feature -->
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Start Single Feature -->
+                    <div class="single-feature wow fadeInUp" data-wow-delay=".4s">
+                        <i class="lni lni-shield"></i>
+                        <h3>Secure Transactions</h3>
+                        <p>Transfer funds to various mobile and banking channels in on a secure environment</p>
+                    </div>
+                    <!-- End Single Feature -->
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Start Single Feature -->
+                    <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
+                        <i class="lni lni-user"></i>
+                        <h3>Individual Funds</h3>
+                        <p>Separate your personal funds from the business funds in a more efficient way.</p>
+                    </div>
+                    <!-- End Single Feature -->
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Start Single Feature -->
+                    <div class="single-feature wow fadeInUp" data-wow-delay=".2s">
+                        <i class="lni lni-shield"></i>
+                        <h3>Bulk Payment</h3>
+                        <p>Group simlar transactions into one bulk payment at reduced rates.</p>
+                    </div>
+                    <!-- End Single Feature -->
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Start Single Feature -->
+                    <div class="single-feature wow fadeInUp" data-wow-delay=".4s">
+                        <i class="lni lni-cog"></i>
+                        <h3>Track Expenses</h3>
+                        <p>Keep a close eye on your business expense. No more lost receipts.</p>
+                    </div>
+                    <!-- End Single Feature -->
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Start Single Feature -->
+                    <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
+                        <i class="lni lni-layers"></i>
+                        <h3>On-Demand Pay</h3>
+                        <p>Make fast payment on-demand, in a few clicks.</p>
+                    </div>
+                    <!-- End Single Feature -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Features Area -->
 
-		<footer class="site-footer">
-			<div class="footer-particles-container">
-				<canvas id="footer-particles"></canvas>
-			</div>
-			<div class="site-footer-top">
-				<section class="cta section text-light">
-					<div class="container-sm">
-						<div class="cta-inner section-inner">
-							<div class="cta-header text-center">
-								<h2 class="section-title mt-0">Early Access</h2>
-								<p class="section-paragraph">Contact us to join for an early access of our payment and business transaction solution</p>
-								<div class="cta-cta">
-									<a class="button button-primary button-wide-mobile" href="#">Get early access</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-			</div>
-			<div class="site-footer-bottom">
-				<div class="container">
-					<div class="site-footer-inner">
-						<div class="brand footer-brand">
-							<a href="#">
-								<img src="{{ asset('images/logo.svg') }}" alt="Venus logo">
-							</a>
-						</div>
-						<ul class="footer-links list-reset">
-							<li>
-								<a href="#">Contact</a>
-							</li>
-							<li>
-								<a href="#">About us</a>
-							</li>
-							<li>
-								<a href="#">FAQ's</a>
-							</li>
-							<li>
-								<a href="#">Support</a>
-							</li>
-						</ul>
-						<ul class="footer-social-links list-reset">
-							<li>
-								<a href="#">
-									<span class="screen-reader-text">Facebook</span>
-									<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-										<path d="M6.023 16L6 9H3V6h3V4c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V6H13l-1 3H9.28v7H6.023z" fill="#FFF"/>
-									</svg>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<span class="screen-reader-text">Twitter</span>
-									<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-										<path d="M16 3c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4C.7 7.7 1.8 9 3.3 9.3c-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H0c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4C15 4.3 15.6 3.7 16 3z" fill="#FFF"/>
-									</svg>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<span class="screen-reader-text">Google</span>
-									<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-										<path d="M7.9 7v2.4H12c-.2 1-1.2 3-4 3-2.4 0-4.3-2-4.3-4.4 0-2.4 2-4.4 4.3-4.4 1.4 0 2.3.6 2.8 1.1l1.9-1.8C11.5 1.7 9.9 1 8 1 4.1 1 1 4.1 1 8s3.1 7 7 7c4 0 6.7-2.8 6.7-6.8 0-.5 0-.8-.1-1.2H7.9z" fill="#FFF"/>
-									</svg>
-								</a>
-							</li>
-						</ul>
-						<div class="footer-copyright">&copy; <script>document.write(new Date().getFullYear());</script> Pouch, all rights reserved</div>
-					</div>
-				</div>
-			</div>
-        </footer>
-    </div>
+    <!-- Start Achievement Area -->
+    <section class="our-achievement section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1 col-md-12 col-12">
+                    <div class="title">
+                        <h2>Built for businesses from various industrial sectors</h2>
+                        <p>Tried, tested and trusted by hundreds of businesses</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-12">
+                            <div class="single-achievement wow fadeInUp" data-wow-delay=".2s">
+                                <h3 class="counter"><span id="secondo1" class="countup" cup-end="100">100</span>%
+                                </h3>
+                                <p>satisfaction</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-12">
+                            <div class="single-achievement wow fadeInUp" data-wow-delay=".4s">
+                                <h3 class="counter"><span id="secondo2" class="countup" cup-end="10">10</span>K
+                                </h3>
+                                <p>Happy Users</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-12">
+                            <div class="single-achievement wow fadeInUp" data-wow-delay=".6s">
+                                <h3 class="counter"><span id="secondo3" class="countup" cup-end="15">15</span>k+
+                                </h3>
+                                <p>Downloads</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Achievement Area -->
 
-    <script src="{{ asset('js/main.min.js') }}"></script>
+    <!-- Start Footer Area -->
+    <footer class="footer">
+        <!-- Start Footer Top -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <!-- Single Widget -->
+                        <div class="single-footer f-about">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <h3 class="text-white">POUCH</h3>
+                                </a>
+                            </div>
+                            <p>Empower your teams and stay in control of your spend.</p>
+                            <ul class="social">
+                                <li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="lni lni-instagram"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="lni lni-youtube"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="lni lni-pinterest"></i></a></li>
+                            </ul>
+                            <p class="copyright-text">Designed and Developed by <a href="https://pouch.africa/"
+                                    rel="nofollow" target="_blank">Pouch Africa</a>
+                            </p>
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-12">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <!-- Single Widget -->
+                                <div class="single-footer f-link">
+                                    <h3>Solutions</h3>
+                                    <ul>
+                                        <li><a href="javascript:void(0)">Marketing</a></li>
+                                        <li><a href="javascript:void(0)">Analytics</a></li>
+                                        <li><a href="javascript:void(0)">Commerce</a></li>
+                                        <li><a href="javascript:void(0)">Insights</a></li>
+                                        <li><a href="javascript:void(0)">Promotion</a></li>
+                                    </ul>
+                                </div>
+                                <!-- End Single Widget -->
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <!-- Single Widget -->
+                                <div class="single-footer f-link">
+                                    <h3>Support</h3>
+                                    <ul>
+                                        <li><a href="javascript:void(0)">Contact</a></li>
+                                        <li><a href="javascript:void(0)">Documentation</a></li>
+                                        <li><a href="javascript:void(0)">Guides</a></li>
+                                        <li><a href="javascript:void(0)">API Status</a></li>
+                                        <li><a href="javascript:void(0)">Live Support</a></li>
+                                    </ul>
+                                </div>
+                                <!-- End Single Widget -->
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <!-- Single Widget -->
+                                <div class="single-footer f-link">
+                                    <h3>Company</h3>
+                                    <ul>
+                                        <li><a href="javascript:void(0)">About Us</a></li>
+                                        <li><a href="javascript:void(0)">Our Blog</a></li>
+                                        <li><a href="javascript:void(0)">Jobs</a></li>
+                                        <li><a href="javascript:void(0)">Press</a></li>
+                                        <li><a href="javascript:void(0)">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                                <!-- End Single Widget -->
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <!-- Single Widget -->
+                                <div class="single-footer f-link">
+                                    <h3>Legal</h3>
+                                    <ul>
+                                        <li><a href="javascript:void(0)">Terms & Conditions</a></li>
+                                        <li><a href="javascript:void(0)">Privacy Policy</a></li>
+                                        <li><a href="javascript:void(0)">Catering Services</a></li>
+                                        <li><a href="javascript:void(0)">Customer Relations</a></li>
+                                        <li><a href="javascript:void(0)">Innovation</a></li>
+                                    </ul>
+                                </div>
+                                <!-- End Single Widget -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ End Footer Top -->
+    </footer>
+    <!--/ End Footer Area -->
+
+    <!-- ========================= scroll-top ========================= -->
+    <a href="#" class="scroll-top">
+        <i class="lni lni-chevron-up"></i>
+    </a>
+
+    <!-- ========================= JS here ========================= -->
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/wow.min.js') }}"></script>
+    <script src="{{ asset('assets/js/tiny-slider.js') }}"></script>
+    <script src="{{ asset('assets/js/glightbox.min.js') }}"></script>
+    <script src="{{ asset('assets/js/count-up.min.js') }}"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script type="text/javascript">
+        //====== counter up 
+        var cu = new counterUp({
+            start: 0,
+            duration: 2000,
+            intvalues: true,
+            interval: 100,
+            append: " ",
+        });
+        cu.start();
+    </script>
 </body>
+
 </html>
